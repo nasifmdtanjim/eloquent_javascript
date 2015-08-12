@@ -51,5 +51,4 @@
     		console.log(prop + ': ' + average(_group_by_century[prop].map(lifeSpan)));
     	}
     }
-    // console.log(_group_by_century);
 })();
