@@ -70,11 +70,11 @@
 	inheritPrototype(StretchCell, TextCell);
 
 	StretchCell.prototype.minWidth = function() {
-		return (this.min_width > TextCell.prototype.minWidth.call(this)) ? this.min_width : TextCell.prototype.minWidth.call(this);
+		return Math.max(this.min_width, TextCell.prototype.minWidth.call(this));
 	}
 
 	StretchCell.prototype.minHeight = function() {
-		return (this.min_height > TextCell.prototype.minHeight.call(this)) ? this.min_height : TextCell.prototype.minHeight.call(this);
+		return Math.max(this.min_height, TextCell.prototype.minHeight.call(this));
 	}
 
 	function UnderlinedCell(text) {
